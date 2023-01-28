@@ -1,0 +1,141 @@
+/* body{
+    background-image: url(./background1.PNG);
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    -moz-background-size:100% 100%;  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+}  */
+ @keyframes animatedBackground {
+    from { background-position: 0 0; }
+     to { background-position: 100% 100%; }
+}
+body{ 
+    width: 560px; 
+    height: 400px; 
+    background-image: url(./background1.PNG);
+    background-position: 0px 0px;
+    background-repeat: repeat-x;  
+    animation: animatedBackground 40s linear infinite;
+    animation-direction: reverse;
+  } 
+
+header, main, footer{
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+header{ 
+    border: 2px; 
+    background-color: aqua;  
+    display: flex;
+    justify-content: left;
+    margin-bottom: 16px;
+    font-size: 16px;
+    }
+main {
+    height: 500px;
+    float: left;
+    text-align: left;
+    margin: 0 10px;
+    font-size: medium;
+   
+}
+footer{
+    position: absolute;
+    top:900px;
+    font-size:medium;
+    background-color:greenyellow;
+    width: 100%;
+    height: 28px;
+    text-align:justify;
+}
+
+nav, article, aside{
+    float: left;
+    height: 100%;
+    
+}
+nav{   
+    width: 230px;
+    font-size: medium;  
+   
+   }
+article{ 
+    width: 800px;
+    margin: 0 6px;
+}
+aside{   
+    width: 80px;
+  }
+
+#div1{
+    width: 780px;
+    height: 130px;
+    display:flex;     
+    background-color: rgb(127, 252, 160);
+    flex-direction: column;
+    font-size:1.2em;
+    justify-content:flex-end;       
+    text-align: center;
+    border-radius: 100%;
+    align-items:center;
+    justify-content:center;
+    color: blueviolet;
+    box-shadow: 10px 0 23px rgba(20, 47, 147, 0.8);  
+    margin-top: 10px; 
+    transition:2s;
+    text-decoration: dotted;
+      
+      
+}
+
+.span1{
+    margin: 36px;
+}
+
+
+
+
+#Edu, #Work,#Proj{
+    color:green;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 6px;
+}
+#contact{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+
+a:link{
+    color: blue;
+}
+a:hover{
+    color:purple;
+}
+
+
+.div1,.li{
+    display: inline;
+    display:flex;
+    width: 360px;
+}
+
+span{
+    width: fit-content;
+}
+
+img{
+    width: 200px;
+    height: 160px;
+}
+.wrap img{
+    width: 10px;
+    height: auto;
+    vertical-align: middle;
+}
+

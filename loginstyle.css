@@ -1,0 +1,60 @@
+body{
+    font-family:roboto;
+    background-image:url(./background1.PNG);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+/*  @keyframes animatedBackground {
+    from { background-position: 0 0; }
+     to { background-position: 100% 100%; }
+}
+body{ 
+    width: 560px; 
+    height: 400px; 
+    background-image: url(./background1.PNG);
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+  
+    animation: animatedBackground 40s linear infinite;
+  } 
+ */
+
+.login{
+    background-color: #0b132b;
+    width: 400px;
+    color: aliceblue;
+    padding: 40px;
+    box-shadow: 10px 10px 25px #00000080;
+    text-align: center;
+
+}
+.login input {
+    display:block;
+    margin:20px auto;
+    text-align: center;
+    background: none;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 22px;
+    outline: none;
+    color:#f8f9fa;
+    
+}
+
+.login input {
+    width: 220px;
+    border: 2px solid rgb(0, 255, 208);
+    cursor: pointer;
+}
+.login input [type="text"]:focus, .login input[type="number"]:focus{
+    border-color: green;
+    width:280px;
+    transition:0.5s;
+}
+.login input [type="submit"]:hover {
+    background-color: aquamarine;
+    transition:0.5s
+
+}
