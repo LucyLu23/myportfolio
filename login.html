@@ -11,14 +11,11 @@
     <form action="myportfolio.html" class="login" >
         <h1>WelcomeToLucyPortfolio</h1>
         <input type="text" id="name1" placeholder="username" />
-        <!-- <button id="button0">Number</button> -->
-        
-        <input type="submit" value="submit" id="submit1" />
-     <!--    <Button size="small" color="primary" onClick={()=> dispatch(likePost(post._id))}>
-            <ThumbUpAltIcon fontSize='small' />
-            &nbsp; Like &nbsp;
-            {post.likeCount}
-        </Button> -->
+        <button id="button010">Visitor Number</button> 
+     <!--  <input type="text" id="number1" placeholder="VisitorNumber" /> 
+      const button010 = document.getElementById('button010'); -->
+        <input type="submit" value="Login" id="submit1" />
+    
     </form>
     <script>
         
@@ -27,23 +24,89 @@
         function func00(){          
             button00.style.color = 'blue';
             button00.style.fontSize = '1.2em;';
-    
-};
-/* button00.innerHTML = `visitors: ${number+1}` */
-/* const button0 = document.getElementById('button0');
-const number=0;
-button0.addEventListener('click', func0);
-function func0(){
-    button0.innerHTML = `visitors: ${number+1}` ;
-    button0.style.color = 'blue';
-    button0.style.fontSize = '1.2em;';
-}; */
+        }       
+    var caution=false;
+    function setCookie(name,value,expires,path,domain,secure){
+        var curCookie=name+"="+escape(value) +
+        ((expires)?";expires="+expires.toGMTString() : "") +
+        ((path)?"; path=" + path : "") +
+        ((domain)? "; domain=" + domain : "") +
+        ((secure)?";secure" : "")
+        if(!caution||(name + "=" + escape(value)).length <= 4000){
+            document.cookie = curCookie
+        }else if(confirm("Cookie exceeds 4KB and will be cut!")){
+            document.cookie = curCookie
+            }
+    }
 
+    function getCookie(name)
 
+{
 
-    </script>
-  
-    
-    
+var prefix = name + "="
+
+var cookieStartIndex = document.cookie.indexOf(prefix)
+
+if (cookieStartIndex == -1)
+
+{
+
+return null
+
+}
+
+var cookieEndIndex=document.cookie.indexOf(";",cookieStartIndex+prefix.length)
+
+if(cookieEndIndex == -1)
+
+{
+
+cookieEndIndex = document.cookie.length
+
+}
+
+return unescape(document.cookie.substring(cookieStartIndex+prefix.length,cookieEndIndex))
+
+}
+
+    function deleteCookie(name, path, domain){
+        if(getCookie(name)){
+            document.cookie = name + "=" +
+            ((path) ? "; path=" + path : "") +
+            ((domain) ? "; domain=" + domain : "") +
+             "; expires=Thu, 01-Jan-70 00:00:01 GMT"
+        }
+    }
+    function fixDate(date){
+        var base=new Date(0);
+        var skew=base.getTime();
+        if(skew>0){
+            date.setTime(date.getTime()-skew)
+        }
+    }
+
+    var now=new Date()
+    fixDate(now)
+    now.setTime(now.getTime()+365 * 24 * 60 * 60 * 1000)
+    var visits = getCookie("counter")
+    if(!visits){
+        visits=1;
+    }else{
+        visits=parseInt(visits)+1;
+    }
+setCookie("counter", visits, now);
+document.write("you are the " + visits + "th"+ " visitor！");
+//newWindow.document.close()
+//  <input type="text" id="number1" placeholder="VisitorNumber" />
+//const button010 = document.getElementById('button010')
+const button010 = document.getElementById('button010'); 
+button010.addEventListener('mouseover', func010);
+    function func010(){    
+        button010.innerHTML=`${visits}`;   
+        button010.style.color = 'blue';
+        button010.style.fontSize = '1.2em;';
+        }
+</script>
+       
 </body>
 </html>

@@ -1,3 +1,29 @@
+const button1000 = document.getElementById('button1000');
+button1000.addEventListener('click', func1000);
+function func1000(){
+    button1000.innerHTML = 'Skills:JS,HTML,CSS,Github,Postman,MongoDB,Mongoose,React,Node.js;Java:Python; a fast-learner '
+    button1000.style.color = 'blue';
+    button1000.style.fontSize = '1.2em;';
+};
+
+const button1001 = document.getElementById('button1001');
+button1001.addEventListener('click', func1001);
+function func1001(){
+    button1001.innerHTML = 'Skills: IP Law, Legal writing/research/draft, Contract Law, Risk Awareness/Avoidance, Comprehensively thinking'
+    button1001.style.color = 'blue';
+    button1001.style.fontSize = '1.2em;';
+};
+
+const button1002 = document.getElementById('button1002');
+button1002.addEventListener('click', func1002);
+function func1002(){
+    button1002.innerHTML = 'Skills: Contract Management, Data Analysis, Detail-Oriented, Customer Service, Problem-solving'
+    button1002.style.color = 'blue';
+    button1002.style.fontSize = '1.2em;';
+};
+
+
+
 const button100 = document.getElementById('button100');
 button100.addEventListener('click', func100);
 function func100(){
@@ -315,3 +341,20 @@ function func2(){
         div1.innerHTML = "Developed and implemented technical solutions to maintain and improve client infrastructure. Prepared monthly budgeting reports, managed and instructed construction site workers. Analyzed and assessed project costs for materials and project drawings. Conducted cost analysis according to the construction specifications ensuring sound pricing strategies and models."
         div1.style.color= "green" 
         }
+
+        const button12 = document.getElementById('btn12');
+        button12.addEventListener('click', func12);
+        function func12(){
+            button12.innerHTML = 'Thank you for your visiting and comments'
+            button12.style.color = 'green';
+            button12.style.fontSize = '1.2em';
+         /*    const value=input.target.value;
+            const render = function value1(value){
+                return value
+            }
+            render(); */
+            
+           /*  div1.innerHTML = "Developed and implemented technical solutions to maintain and improve client infrastructure. Prepared monthly budgeting reports, managed and instructed construction site workers. Analyzed and assessed project costs for materials and project drawings. Conducted cost analysis according to the construction specifications ensuring sound pricing strategies and models."
+            div1.style.color= "green"  */
+            }
+

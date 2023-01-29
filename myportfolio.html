@@ -10,46 +10,54 @@
 <body>
     
     <header> 
-        <strong> 
-            <span> <strong>Welcome To LucyLu's MyPortfolio Page</strong></span>  
-            
-        </strong> 
+        <div id="header1" > 
+            <span style="color:blueviolet" id="myportfolio"> <strong> <i> LucyLu Portfolio</i> </strong></span>  
+            <span style="margin-left: 20px"> <a href="#div001"> <strong>*About Me </strong></a>  </span>
+            <span style="margin-left:20px"> <a href="#Proj"> <strong>*Projects </strong></a>  </span>
+            <span style="margin-left:20px"> <a href="#Edu"> <strong>*Education </strong> </a> </span> 
+            <span style="margin-left:20px"> <a href="#Work"> <strong>*WorkExperience  </strong> </a> </span>  
+            <span style="margin-left:20px"> <a href="#contact"> <strong>*Contact  </strong></span>
+        </div>       
     </header>
 
     
     <main> 
         <nav>           
-                <h3 id="h3">MyFavoriteProjects</h3>
+            <h4 id="h3">MyFavoriteProjects:</h4>
             <ul id="FavoriteProjects">
                 <li> <a href="https://github.com/LucyLu23/SpaceBattleBetweenUsAndAlienShip">SpaceBattleGame</a> </li>
+                <br>
                 <li> <a href="https://github.com/LucyLu23/TheDOMBasedGame">DOMbasedGame</a> </li>
+                <br>
                 <li> <a href="https://github.com/LucyLu23/week12_memories_project">MemoriesMERNProject</a></li>
             </ul>    
         </nav> 
 
         <article>
-            <div class="box" >      
-                <div class="div1"> <img src="LucyLu.PNG" alt="LucyLu" title="beach" width="169px" height="136px"> </div> 
-                <div id="li">
+            <div class="box" id="div001">      
+                <div class="box1"> <img src="LucyLu.PNG" alt="LucyLu" title="beach" width="169px" height="136px"> </div> 
+                <br>
+                <div class="box2" style="color:blueviolet" >ABOUT ME:                                   
                     <li>
                     <button id="button1000">A Software Engineer</button>
                     </li>
+                    <br>
                     <li>
                         <button id="button1001">A Legal Consultant</button>
                     </li> 
+                    <br>
                     <li>  
                         <button id="button1002">A Civil Engineer</button>                                                                                    
                     </li> 
-                
-                    <span>My Skills: </span> 
+                 
                 </div>                             
             </div>
 
-            <div class="main">           
+            <div class="main" >           
                         
                     <ul>
                         <hr>
-                        <li id="Proj">PROJECTS:
+                        <li id="Proj" >PROJECTS:
                             <li>Project1:
                                 <button id="button100" >Name</button>
                                 <button id="button101">Type</button>
@@ -133,7 +141,7 @@
                      
                     </ul>
                     <hr>
-                    <div id="div1"><i> <strong>MAJOR/DUTIES</strong></i></div> 
+                    <div id="div1"><i> <strong>SKILLS /MAJORS /DUTIES</strong></i></div> 
                     <hr>
                     <div id="contact">
                         <span style="color: blue; font-size: larger;"><strong><i>More Information: </i> </strong></span> 
@@ -150,23 +158,32 @@
                 </div>
         </article>
         <aside>
-            <div class="form">
-                <input class="text" type="text">
-                <input class="btn" type="submit" value="">
-            </div>
-
+           Comment:
+            <textarea name="comment" id="commenttext"></textarea>
+            <button id="commentbutton">Submit</button>   
+            <ul id="commentul" style="color: blue;"></ul>
+            <script>                
+                var btn = document.querySelector('#commentbutton');
+                var text = document.querySelector('#commenttext');
+                var ul = document.querySelector('#commentul');         
+                btn.onclick = function(){
+                    if(text.value == ''){
+                        alert("No comment, Please write down your comment")
+                        return false;
+                    }else{
+                        var li = document.createElement('li');
+                        li.innerHTML = text.value;                        
+                        ul.insertBefore(li,ul.children[0])
+                    }
+                    text.value='';                    
+                }
+                </script> 
         </aside>  
 
     </main>
-
-    <footer>
-       
+    <footer>       
         © Copyright 2023 LucyLu. All rights reserved.
-
     </footer>
-
-
-
     <script src="myportfolio.js"></script>
 </body>
 </html>
