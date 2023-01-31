@@ -95,14 +95,14 @@ return unescape(document.cookie.substring(cookieStartIndex+prefix.length,cookieE
         visits=parseInt(visits)+1;
     }
 setCookie("counter", visits, now);
-document.write("you are the " + visits + "th"+ " visitor！");
+//document.write("you are the " + visits + "th"+ " visitor！");
 //newWindow.document.close()
 //  <input type="text" id="number1" placeholder="VisitorNumber" />
 //const button010 = document.getElementById('button010')
 const button010 = document.getElementById('button010'); 
 button010.addEventListener('mouseover', func010);
     function func010(){    
-        button010.innerHTML=`${visits}`;   
+        button010.innerHTML=`You are the ${visits}th visitor`;   
         button010.style.color = 'blue';
         button010.style.fontSize = '1.2em;';
         }
